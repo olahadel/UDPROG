@@ -1,4 +1,3 @@
-# UDPROG
 #include <iostream>
 using namespace std;
 int main()
@@ -11,6 +10,5 @@ cin>>b;
 a=a+b;
 b=a-b;
 a=a-b;
-cout<<endl<<a;
 cout<<endl<<"Csere:"<<endl<<"a:"<<a<<endl<<"b:"<<b;
 }
