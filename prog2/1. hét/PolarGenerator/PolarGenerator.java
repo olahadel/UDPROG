@@ -1,5 +1,3 @@
-package polargenerator;
-
 public class PolarGenerator {
 
     boolean nincsTarolt= true;
