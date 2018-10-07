@@ -9,7 +9,7 @@ public class Liskov {
                            //nem statikus, mert a kerület függvény nem tartozik szorosan a Négyszög osztályhoz
     };
 
-    public static class Teglalap extends Negyszog
+    public static class Trapez extends Negyszog
     {};
 
     public static class Negyzet extends Negyszog // négyzet kerülete esetén nincs b, csak 4 a
@@ -20,8 +20,8 @@ public class Liskov {
      Negyszog negyszog = new Negyszog();
      Program.fgv(negyszog);
 
-     Teglalap teglalap = new Teglalap();
-     Program.fgv(teglalap);
+     Trapez trapez = new Trapez();
+     Program.fgv(trapez);
 
      Negyzet negyzet = new Negyzet();
      Program.fgv(negyzet); // sérül az LSP, mert a négyzet kerületét nem számíthatjuk ki úgy, 
