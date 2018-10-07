@@ -43,8 +43,6 @@ int main(){
 
     PolarGenerator g;
 
-    //cout<<g.kovetkezo();
-
     for (int i = 0; i < 10; i++) {
         cout<<g.kovetkezo()<<endl;
     }
