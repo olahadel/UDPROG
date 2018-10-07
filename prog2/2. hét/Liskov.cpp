@@ -9,7 +9,7 @@ public:
           negyszog.kerulet();
      }};
 
-class Teglalap : public Negyszog
+class Trapez : public Negyszog
 {};
 
 class Negyzet : public Negyszog // négyzet kerülete esetén nincs b, csak 4 a
@@ -20,8 +20,8 @@ int main() {
      Negyszog negyszog;
      program.fgv ( negyszog );
 
-     Teglalap teglalap;
-     program.fgv ( teglalap );
+     Trapez trapez;     //hacsak nem speciális eset 4 különböző hosszú oldala van
+     program.fgv ( trapez );
 
      Negyzet negyzet;
      program.fgv ( negyzet ); // sérül az LSP, mert a négyzet kerületét nem számíthatjuk ki úgy, 
