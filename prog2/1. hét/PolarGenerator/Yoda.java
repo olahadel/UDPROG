@@ -2,15 +2,13 @@ public class Yoda {
 
     public static void main(String[] args) {
         
-        String szoveg = "ABCD";
+        String szoveg = null;       //NullPointerException-hoz szükséges
         
-        if(szoveg.equals("ABCD"))
+        if(szoveg.equals("ABCD"))       //NullPointerException-t dob -- normál sorrend
             System.out.println("Ezaz.");
         
-        szoveg = null;
-        
-        if(szoveg.equals("ABCD"))
-            System.out.println("Ezaz");
+        if("ABCD".equals(szoveg))       //nem kapunk kivételt -- Yoda sorrend
+            System.out.println("Ezaz.");
         
     }    
 }
