@@ -1,6 +1,8 @@
 //STL map: Standard Template Library
 #include <iostream>
 #include <vector>
+#include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -23,7 +25,7 @@ vector<pair<string,int>> sort_map(map<string,int> &rank)
 	return ordered;
 }
 
-int main{
+int main(){
 	return 0;
 }
 
