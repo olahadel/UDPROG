@@ -70,7 +70,7 @@ class FileTree extends javafx.scene.control.TreeView<java.io.File> {    //javafx
         protected boolean treeChanged = true;
 
         @Override
-        public javafx.collections.ObservableList<javafx.scene.control.TreeItem<java.io.File>> getChildren() {   //olyan lista, amelynek a változásait nyomon lehet követni a változás beköetkezésekor
+        public javafx.collections.ObservableList<javafx.scene.control.TreeItem<java.io.File>> getChildren() {   //olyan lista, amelynek a változásait nyomon lehet követni a változás bekövetkezésekor
             if (treeChanged) {
                 treeChanged = false;
                 super.getChildren().setAll(buildChildren(this));        //minden bejegyzésnek képet állit be (mappa/fájl)
@@ -182,7 +182,6 @@ class FileTree extends javafx.scene.control.TreeView<java.io.File> {    //javafx
                         javafx.scene.control.TreeItem<java.io.File> newAct
                                 //                           = new javafx.scene.control.TreeItem<java.io.File>(f, new javafx.scene.image.ImageView(actIcon));
                                 = new FileTreeItem(f, new javafx.scene.image.ImageView(actIcon));
-                        //System.out.println("itttttt");
                         getTreeItem().getChildren().add(newAct);
                     } else {
                         System.err.println("Cannot create " + f.getPath());
@@ -261,7 +260,7 @@ class FileTree extends javafx.scene.control.TreeView<java.io.File> {    //javafx
                     java.io.File newf = new java.io.File(newText);
                     java.io.File oldf = new java.io.File(oldText);
                     try {
-                        Files.move(oldf.toPath(), newf.toPath());
+                        Files.move(oldf.toPath(), newf.toPath());       // átnevezés
                         
                         /*if (oldf.isDirectory()) {
                             newf.mkdir();
