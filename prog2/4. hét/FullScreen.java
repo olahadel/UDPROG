@@ -13,8 +13,8 @@ public class FullScreen extends JFrame{
         b.add(message);
         
         b.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        b.setUndecorated(true);
-        b.setVisible(true);
+        b.setUndecorated(true);     //true esetén nincs fejléc sem
+        b.setVisible(true);         //true esetén látható az ablak
     }
     
     /*public void run(DisplayMode dm) {
